@@ -228,6 +228,7 @@ def load_tokenized_prepared_datasets(
 
             d_base_type = d_prompt_style = None
             d_type = d.type
+            print("dataset is ", ds)
             if isinstance(d_type, str):
                 d_type_split = d_type.split(":")
                 d_base_type = d_type_split[0]
