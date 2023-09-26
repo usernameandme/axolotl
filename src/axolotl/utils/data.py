@@ -235,6 +235,8 @@ def load_tokenized_prepared_datasets(
                 d_prompt_style = d_type_split[1] if len(d_type_split) > 1 else None
             if "train" in ds:
                 ds = ds["train"]
+            if "validation" in ds:
+                ds = ds["validation"]
             if (
                 "input_ids" in ds.features
                 and "attention_mask" in ds.features
